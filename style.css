@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #18181a; /* Deep charcoal */
+  color: #e5e5ea; /* Light gray text */
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #23232b; /* Slightly lighter charcoal */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e5e5ea; /* fallback for unsupported nth-of-type */
+}
+
+/* Moody, modern accent colors for headings */
+h1:nth-of-type(1) {
+  color: #a259a4; /* Plum */
+}
+
+h1:nth-of-type(2) {
+  color: #d98841; /* Copper */
+}
+
+h1:nth-of-type(3) {
+  color: #8ca0b3; /* Cool gray */
+}
+
+p {
+  color: #e5e5ea;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #a259a4; /* Plum */
+  color: #18181a; /* Very dark text for contrast */
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(60, 60, 67, 0.3);
+}
+
+button:hover {
+  background-color: #6d326d; /* Deep plum for hover */
+  color: #fff;
+}
