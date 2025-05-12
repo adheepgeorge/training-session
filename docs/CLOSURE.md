@@ -2,6 +2,8 @@
 
 ### Close your eyes and imagine yourself in your kitchen 🍽️
 
+<img src="../assets/remy_eating.gif" width="500"  alt="remy eating"/>
+
 #### Lexical Scope (Basic Case)
 
 ```javascript
@@ -26,6 +28,8 @@ This is like eating pizza in the kitchen right now:
 - We can't access the pizza again after the kitchen function is done
 
 #### Closure (Advanced Case)
+
+<img src="../assets/lion_king_pizza.gif" height="400" alt="lion king pizza"/>
 
 ```javascript
 function kitchen() {
@@ -54,18 +58,24 @@ A closure is a function that remembers and can access variables from its outer (
 
 Closure => A Function that remembers its lexical scope
 
+<img src="../assets/never_forget.gif"  alt="never forget"/>
+
 ### Understanding Through Chrome DevTools > Sources Tab🔍
 
-When you add a breakpoint inside `eat` function and inspect the Scope panel, you'll see:
+Try adding a breakpoint inside `eat` function and inspect the Scope panel, what do you see?
 
 1. **Local**: Shows local variables for the current function
 2. **Closure (kitchen function)**: Shows `food` variable - this is the closure in action!
 3. **Script**: Shows top-level variables/functions
 4. **Global**: Shows global objects and functions
 
-### Questions and Solutions 💡
+### Problems and Solutions 💡
+
+<img src="../assets/problem.gif" width='500' alt="problem"/>
 
 #### 1. Basic Counter
+
+<img src="../assets/counter.gif" width='200' alt="counter"/>
 
 - Create a counter function that maintains its count between calls.
 - Each time the function is called, it should increment and return the count.
@@ -78,6 +88,8 @@ console.log(counter()); // 3
 ```
 
 #### 2. Secret Holder
+
+<img src="../assets/secret.gif" width='400' alt="secret"/>
 
 Create a function that can securely hold and manage a secret value. The function should return an object with two methods:
 
@@ -95,6 +107,8 @@ console.log(holder.getSecret()); // "new secret"
 we used closures to create private variables and implement encapsulation in JavaScript
 
 #### 3. Memoization
+
+<img src="../assets/remember_me.gif" width='400' alt="remember me"/>
 
 Create a memoized version of the double function
 Double function - A simple function that takes a number and doubles it
