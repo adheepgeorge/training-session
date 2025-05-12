@@ -153,3 +153,67 @@ button.click(); // Logs "Button clicked 3"
 ```
 
 7. Closure with Promises:
+
+### Practical Use Cases 🛠️
+
+#### 1. Module Design Pattern
+
+```javascript
+const counterModule = (function () {
+  let count = 0;
+
+  return {
+    increment() {
+      return ++count;
+    },
+    getCount() {
+      return count;
+    },
+  };
+})();
+
+console.log(counterModule.increment()); // 1
+console.log(counterModule.getCount()); // 1
+```
+
+#### 2. Function Factory
+
+```javascript
+function multiply(x) {
+  return function (y) {
+    return x * y;
+  };
+}
+
+const multiplyByTwo = multiply(2);
+console.log(multiplyByTwo(5)); // 10
+```
+
+#### 3. Maintaining State in Async Operations
+
+```javascript
+function createCounter() {
+  let count = 0;
+  return function () {
+    return ++count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+```
+
+#### 4. Debouncing
+
+```javascript
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+const debouncedSearch = debounce(() => console.log("Searching..."), 1000);
+```

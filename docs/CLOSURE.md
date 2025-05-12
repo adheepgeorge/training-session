@@ -63,111 +63,54 @@ When you add a breakpoint inside `eat` function and inspect the Scope panel, you
 3. **Script**: Shows top-level variables/functions
 4. **Global**: Shows global objects and functions
 
-### Practical Use Cases 🛠️
-
-#### 1. Module Design Pattern
-
-```javascript
-const counterModule = (function () {
-  let count = 0;
-
-  return {
-    increment() {
-      return ++count;
-    },
-    getCount() {
-      return count;
-    },
-  };
-})();
-
-console.log(counterModule.increment()); // 1
-console.log(counterModule.getCount()); // 1
-```
-
-#### 2. Function Factory
-
-```javascript
-function multiply(x) {
-  return function (y) {
-    return x * y;
-  };
-}
-
-const multiplyByTwo = multiply(2);
-console.log(multiplyByTwo(5)); // 10
-```
-
-#### 3. Maintaining State in Async Operations
-
-```javascript
-function createCounter() {
-  let count = 0;
-  return function () {
-    return ++count;
-  };
-}
-
-const counter = createCounter();
-console.log(counter()); // 1
-console.log(counter()); // 2
-```
-
-#### 4. Debouncing
-
-```javascript
-function debounce(fn, delay) {
-  let timeoutId;
-  return function (...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn.apply(this, args), delay);
-  };
-}
-
-const debouncedSearch = debounce(() => console.log("Searching..."), 1000);
-```
-
 ### Questions and Solutions 💡
 
 #### 1. Basic Counter
 
-```javascript
-function createCounter() {
-  let count = 0;
-  return function () {
-    return ++count;
-  };
-}
+- Create a counter function that maintains its count between calls.
+- Each time the function is called, it should increment and return the count.
+
+```js
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
 ```
 
 #### 2. Secret Holder
 
+Create a function that can securely hold and manage a secret value. The function should return an object with two methods:
+
+1. getSecret() - to retrieve the current secret value
+2. setSecret(newSecret) - to update the secret value
+   The secret should be private and only accessible through these methods.
+
 ```javascript
-function createSecretHolder(secret) {
-  return {
-    getSecret() {
-      return secret;
-    },
-    setSecret(newSecret) {
-      secret = newSecret;
-    },
-  };
-}
+const holder = createSecretHolder("initial secret");
+console.log(holder.getSecret()); // "initial secret"
+holder.setSecret("new secret");
+console.log(holder.getSecret()); // "new secret"
 ```
+
+we used closures to create private variables and implement encapsulation in JavaScript
 
 #### 3. Memoization
 
+Create a memoized version of the double function
+Double function - A simple function that takes a number and doubles it
+
 ```javascript
-function memoize(fn) {
-  const cache = new Map();
-  return function (...args) {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) return cache.get(key);
-    const result = fn.apply(this, args);
-    cache.set(key, result);
-    return result;
-  };
+function double(x) {
+  console.log("Calculating..."); // This will only run for new inputs
+  return x * 2;
 }
+
+const memoizedDouble = memoize(double);
+
+console.log(memoizedDouble(5)); // Calculating... 10
+console.log(memoizedDouble(5)); // 10 (uses cached result)
+console.log(memoizedDouble(5)); // 10 (uses cached result)
+console.log(memoizedDouble(10)); // Calculating... 20
 ```
 
 #### 4. Yawn once button
@@ -180,3 +123,7 @@ function memoize(fn) {
 4. **Debugging**: Use Chrome DevTools to inspect closure scopes
 
 ### Summary
+
+```
+
+```
