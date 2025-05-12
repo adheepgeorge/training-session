@@ -11,24 +11,17 @@ In JavaScript, functions are first-class citizens, meaning they can be:
 
 ### What are Callbacks? 🤔
 
-A callback is simply a function that is passed as an argument to another function and is executed after the main function has finished its execution. Think of it as a "call me back later" mechanism in JavaScript.
+<img src="../assets/call_me.gif" width="400" height="300" alt="sid call me"/>
 
-### Real-World Analogy: Restaurant Order 🍽️
-
-Imagine you're at a restaurant:
-
-1. You place your order (main function)
-2. The waiter takes your order to the kitchen (async operation)
-3. While waiting, you can do other things (non-blocking)
-4. When your food is ready, the waiter brings it to you (callback execution)
-
-This is exactly how callbacks work in JavaScript!
+A callback is simply a function that is passed as an argument to another function and is executed after the completion of some operations. Think of it as a "call me back later" mechanism in JavaScript.
 
 ### Types of Callbacks
 
 #### 1. Synchronous Callbacks
 
 These execute immediately, like a waiter who brings your water right away.
+
+<img src="../assets/what_are_you_waiting_for.gif"  alt="waiting for"/>
 
 ```javascript
 // Example: Array methods with synchronous callbacks
@@ -48,6 +41,8 @@ console.log(evenNumbers); // [2, 4]
 ```
 
 #### 2. Asynchronous Callbacks
+
+<img src="../assets/oogway.gif"  alt="oogway"/>
 
 These execute after some time or when an event occurs, like waiting for your food to be cooked.
 
@@ -93,6 +88,8 @@ processOrder("Pizza", function (result) {
 
 While callbacks are powerful, they can lead to "Callback Hell" when nested deeply:
 
+<img src="../assets/hell.gif"  alt="hell"/>
+
 ```javascript
 // Callback Hell Example
 getUser(function (user) {
@@ -108,7 +105,6 @@ This led to the development of:
 
 - Promises
 - Async/await
-- Modern async patterns
 
 ### Key Takeaways 🎯
 
@@ -116,11 +112,8 @@ This led to the development of:
 2. **Best Practice**: Keep callbacks simple and avoid deep nesting
 3. **Modern Approach**: Consider using Promises or async/await for complex async operations
 
-```
-
 ### Summary
 
-Callbacks are fundamental to JavaScript's asynchronous nature. They allow us to handle operations that take time without blocking the main thread.
+<img src="../assets/block.gif"  alt="block"/>
 
---
-```
+Callbacks are fundamental to JavaScript's asynchronous nature. They allow us to handle operations that take time without blocking the main thread.
