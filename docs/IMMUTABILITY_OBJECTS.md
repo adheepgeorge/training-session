@@ -54,20 +54,79 @@ user.address.city = "Boston"; // Still works! (shallow freeze)
 
 #### 2. Creating New Objects (Not Immutable, but Common Pattern)
 
-<img src="../assets/spread.gif" width="400" height="300" alt="Spread animation"/>
+Spread and rest operators share the same syntax (...)
+
+<img src="../assets/spread_operator.gif" width="400" height="300" alt="Spread animation"/>
+
+##### Spread Operator
+
+function arguments or array literals, it spreads
+
+```js
+// Spreading arrays
+const numbers = [1, 2, 3];
+const moreNumbers = [...numbers, 4, 5]; // [1, 2, 3, 4, 5]
+
+// Spreading objects
+const person = { name: "John" };
+const updatedPerson = { ...person, age: 30 }; // { name: "John", age: 30 }
+```
 
 ```javascript
 const original = { name: "John", age: 30 };
 const copy = { ...original, age: 31 };
 ```
 
-<img src="../assets/spread_operator.gif" width="400" height="300" alt="Spread animation"/>
-
 The spread operator (`...`) and Object.assign() are often used in immutable programming patterns, but they don't make objects immutable. Instead, they:
 
 - Create new objects instead of modifying existing ones
 - Help follow the principle of "never mutate state directly"
 - Are commonly used in React and other frameworks
+
+##### Rest Operator
+
+used in a place where a collection is expected (like function parameters or destructuring), it collects
+
+Collects or gathers elements. It's like gathering remaining items into a collection.
+
+In function parameters to collect arguments
+In destructuring to collect remaining properties
+To gather remaining elements into an array/object
+
+##### Object Destructing
+
+```js
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+// Traditional way of accessing object properties
+const name = person.name;
+const age = person.age;
+const city = person.city;
+
+// Using object destructuring
+const { name: personName, age: personAge, city: personCity } = person;
+console.log(personName); // Output: John
+console.log(personAge); // Output: 30
+console.log(personCity); // Output: New York
+```
+
+```js
+// Rest in function parameters
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+sum(1, 2, 3, 4); // 10
+
+// Rest in object destructuring
+const user = { name: "John", age: 30, email: "john@example.com" };
+const { name, ...rest } = user;
+// name = "John"
+// rest = { age: 30, email: "john@example.com" }
+```
 
 ⚠️ **Important Note**: These methods don't make objects immutable. They just create new copies. The original object can still be modified if you have a reference to it.
 
