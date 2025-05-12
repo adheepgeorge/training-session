@@ -1,3 +1,3 @@
-1. Prepare presentation for closure session
-2. Problems for closures in separate files
-3. GIFs
+SESSION DOUBTS
+
+1. Where do I ask the freshers to setup the pre-requisites for the session? - ( slack channel?)

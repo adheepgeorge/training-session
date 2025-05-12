@@ -127,7 +127,11 @@ console.log(memoizedDouble(5)); // 10 (uses cached result)
 console.log(memoizedDouble(10)); // Calculating... 20
 ```
 
-#### 4. Yawn once button
+#### 4. Snore once button
+
+Since you guys have been attentive for the past 10 minutes, I'll let you snore once
+
+You can see a button to 'Snore' in your web page.Complete the definition of the createSnoreOnceHandler function, so that the button will let you snore only once.
 
 ### Key Takeaways 🎯
 
@@ -138,6 +142,4 @@ console.log(memoizedDouble(10)); // Calculating... 20
 
 ### Summary
 
-```
-
-```
+Remember: A closure is like a lunchbox that keeps your variables fresh and accessible, even when you're far from the kitchen where they were created! 🍱

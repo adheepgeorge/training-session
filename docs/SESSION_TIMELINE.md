@@ -1,15 +1,15 @@
 **_ SESSION PLAN _**
 
-2:00 PM > Immutability of Objects ( 5 min)
+2:00 PM > Immutability of Objects ( 10 min)
 
-2:05 PM > Callbacks (5 min)
+2:20 PM > Begin Hands on Session on Closure ( 30 min ) [ MOST IMPORTANT***]
 
-2:10 PM > Hands on Session on Closure ( 20 min ) [ MOST IMPORTANT***]
+---- Problem Solving Session ( 40 min )
 
-2:30 PM > ( 30 min )
+2:50 PM > Could start solving problems here
 
 ---
 
-3:00 PM > Problem Solving Session ( 30 min )
+3:00 PM > Problem Solving Session
 
 3:30 PM > SESSION COMPLETED

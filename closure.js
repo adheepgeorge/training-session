@@ -7,8 +7,8 @@ function kitchen() {
 }
 
 // Create a function that remembers the pizza
-const takePizza = kitchen();
+const eatPizza = kitchen();
 
 // Now we can eat the pizza anywhere, even outside the kitchen!
-takePizza(); // Prints: "Eating pizza"
-takePizza(); // Prints: "Eating pizza"
+eatPizza(); // Prints: "Eating pizza"
+eatPizza(); // Prints: "Eating pizza"
