@@ -1,6 +1,6 @@
 **_ SESSION PLAN _**
 
-2:00 PM > Immutability of Objects ( 10 min)
+2:00 PM > Immutability ( 10 min)
 
 2:20 PM > Begin Hands on Session on Closure ( 30 min ) [ MOST IMPORTANT***]
 
