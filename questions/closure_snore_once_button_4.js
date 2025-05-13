@@ -1,16 +1,5 @@
 // Complete definition of the createSnoreHandler function - If you've snored once, you can't snore again
-function createSnoreOnceHandler() {
-  let hasSnored = false; // This variable is "closed over" by the inner function
-
-  return function () {
-    if (!hasSnored) {
-      playSnoreAudio();
-      hasSnored = true;
-    } else {
-      alert("Hey, you've already snored once!");
-    }
-  };
-}
+function createSnoreOnceHandler() {}
 
 // Use this function to play the snore sound
 const playSnoreAudio = () => {

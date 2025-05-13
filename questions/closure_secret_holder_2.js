@@ -7,13 +7,4 @@
  * The secret should be private and only accessible through these methods.
  */
 
-function createSecretHolder(secret) {
-  return {
-    getSecret() {
-      return secret;
-    },
-    setSecret(newSecret) {
-      secret = newSecret;
-    },
-  };
-}
+function createSecretHolder() {}

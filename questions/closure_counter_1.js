@@ -8,12 +8,7 @@
  * console.log(counter()); // 3
  */
 
-function createCounter() {
-  let count = 0;
-  return function () {
-    return ++count;
-  };
-}
+function createCounter() {}
 
 const counter = createCounter();
 console.log(counter()); // 1

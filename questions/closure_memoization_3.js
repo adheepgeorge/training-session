@@ -1,22 +1,4 @@
-function memoize(fn) {
-  // Create a simple object to store results
-  const cache = {};
-
-  return function (x) {
-    // If we've seen this input before, return the cached result
-    if (x in cache) {
-      return cache[x];
-    }
-
-    // If we haven't seen this input, calculate the result
-    const result = fn(x);
-
-    // Store the result in our cache
-    cache[x] = result;
-
-    return result;
-  };
-}
+function memoize(fn) {}
 
 // A simple function that takes a number and doubles it
 function double(x) {

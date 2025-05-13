@@ -81,6 +81,7 @@ Try adding a breakpoint inside `eat` function and inspect the Scope panel, what 
 - Each time the function is called, it should increment and return the count.
 
 ```js
+// questions/closure_counter_1.js
 const counter = createCounter();
 console.log(counter()); // 1
 console.log(counter()); // 2
@@ -98,6 +99,7 @@ Create a function that can securely hold and manage a secret value. The function
    The secret should be private and only accessible through these methods.
 
 ```javascript
+// questions/closure_secret_holder_2.js
 const holder = createSecretHolder("initial secret");
 console.log(holder.getSecret()); // "initial secret"
 holder.setSecret("new secret");
@@ -114,6 +116,7 @@ Create a memoized version of the double function
 Double function - A simple function that takes a number and doubles it
 
 ```javascript
+// /'questions/closure_memoization_3.js'
 function double(x) {
   console.log("Calculating..."); // This will only run for new inputs
   return x * 2;
@@ -132,7 +135,10 @@ console.log(memoizedDouble(10)); // Calculating... 20
 Since you guys have been attentive for the past 10 minutes, I'll let you snore once
 
 You can see a button to 'Snore' in your web page. Complete the definition of the createSnoreOnceHandler function, so that the button will let you snore only once.
-'questions/closure_snore_once_button_4.js'
+
+```javascript
+// questions/closure_snore_once_button_4.js
+```
 
 ### Key Takeaways 🎯
 
