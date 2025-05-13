@@ -134,6 +134,23 @@ Since you guys have been attentive for the past 10 minutes, I'll let you snore o
 You can see a button to 'Snore' in your web page. Complete the definition of the createSnoreOnceHandler function, so that the button will let you snore only once.
 'questions/closure_snore_once_button_4.js'
 
+#### 5. Predict the output of the following code ( Closure in asynchronous contexts)
+
+```js
+function createCounter() {
+  let count = 0;
+
+  for (let i = 0; i < 3; i++) {
+    setTimeout(() => {
+      count++;
+      console.log(`Count is: ${count}`);
+    }, 1000 * i);
+  }
+}
+```
+
+createCounter();
+
 ### Key Takeaways 🎯
 
 1. **Remember**: A closure is a function that remembers its lexical scope
