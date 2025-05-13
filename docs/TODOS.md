@@ -4,5 +4,4 @@ SESSION DOUBTS
 
 SESSION MATERIALS
 
-1. update object destructuring section in immutability_objects.md
 2. Add one more problem on closure from confluence page (pref with setTimeout)

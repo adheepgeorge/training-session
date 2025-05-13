@@ -93,7 +93,26 @@ In function parameters to collect arguments
 In destructuring to collect remaining properties
 To gather remaining elements into an array/object
 
-#### Object Destructing
+##### Object Destructing
+
+```js
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+// Traditional way of accessing object properties
+const name = person.name;
+const age = person.age;
+const city = person.city;
+
+// Using object destructuring
+const { name: personName, age: personAge, city: personCity } = person;
+console.log(personName); // Output: John
+console.log(personAge); // Output: 30
+console.log(personCity); // Output: New York
+```
 
 ```js
 // Rest in function parameters
